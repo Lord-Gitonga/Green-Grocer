@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded',()=>{
 
     const groceryItems = document.getElementById('my-display');
     
@@ -6,16 +6,14 @@ document.addEventListener('DOMContentLoaded', function(){
     const popUp = document.getElementById('popup');
     const popupContent = document.getElementById('popup-content')
     //const popupImage = document.getElementById('my-image');
-    const popupImage = document.createElement('img');
+    //const popupImage = document.createElement('img');
     const popupName = document.getElementById('popup-name')
     const popupDescription = document.getElementById('popup-description')
     const popupPrice = document.getElementById('popup-price')
     
     function showItems () {
         fetch('http://localhost:3000/groceries')
-        .then(function(response){
-            return response.json()
-        })
+        .then( response=> response.json())
         .then(function(data){
             const groceries = data;
             let myListArr = groceries.map(list=>{
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(){
         `;
            groceryItems.appendChild(myList);
            const itemText = myList.querySelector('.card-text a');
-           itemText.addEventListener('click', function(){
+           itemText.addEventListener('click', ()=>{
            
            const popupImage = document.createElement('img');
            popupImage.src = groceryObj.image;
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function(){
             buyButton.textContent = 'Buy Now';
             popupContent.appendChild(buyButton);
 
-            buyButton.addEventListener('click', function(){
+            buyButton.addEventListener('click', ()=>{
                 popupContent.style.display = 'none';
             });
 
@@ -70,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function(){
             cartButton.textContent = 'Add To Cart';
             popupContent.appendChild(cartButton);
 
-            cartButton.addEventListener('click', function(){
+            cartButton.addEventListener('click', ()=>{
                 popupContent.style.display = 'none';
             });
 
@@ -78,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function(){
     } 
 
     const closeBtn = document.getElementById('close-btn');
-    closeBtn.addEventListener('click', function(){
+    closeBtn.addEventListener('click', ()=>{
         popupContent.style.display = 'none';
     });
     

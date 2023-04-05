@@ -57,6 +57,23 @@ document.addEventListener('DOMContentLoaded', function(){
             popupDescription.textContent = groceryObj.description;
             popupPrice.textContent = groceryObj.price;
             popUp.style.display = 'block';
+
+            const buyButton = document.createElement('button');
+            buyButton.textContent = 'Buy Now';
+            popupContent.appendChild(buyButton);
+
+            buyButton.addEventListener('click', function(){
+                popupContent.style.display = 'none';
+            });
+
+            const cartButton = document.createElement('button');
+            cartButton.textContent = 'Add To Cart';
+            popupContent.appendChild(cartButton);
+
+            cartButton.addEventListener('click', function(){
+                popupContent.style.display = 'none';
+            });
+
            });
     } 
 

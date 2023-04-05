@@ -1,19 +1,15 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     const groceryItems = document.getElementById('my-display');
-    //const displaySome = document.getElementsByClassName('card');
+    
     
     const popUp = document.getElementById('popup');
     const popupContent = document.getElementById('popup-content')
-   // const popupImage = document.getElementById('popup-image');
-    //popupImage.innerHTML = '<img src="" alt="Popup Image">';
-    //popupImage.style.maxWidth = '100%';
-    //popupImage.style.maxHeight = '100%';
-    //popupImage.style.overflow = 'auto';
+    //const popupImage = document.getElementById('my-image');
+    const popupImage = document.createElement('img');
     const popupName = document.getElementById('popup-name')
     const popupDescription = document.getElementById('popup-description')
     const popupPrice = document.getElementById('popup-price')
-    //const closeBtn = document.getElementById('close-btn')
     
     function showItems () {
         fetch('http://localhost:3000/groceries')
@@ -31,10 +27,8 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
                 return groceryObj;
             })
-            //console.log(myListArr)
             myListArr.map(list=>displayItem(list))
     
-        //return myListArr(displayItem())
         })
     }
 
@@ -55,8 +49,11 @@ document.addEventListener('DOMContentLoaded', function(){
            groceryItems.appendChild(myList);
            const itemText = myList.querySelector('.card-text a');
            itemText.addEventListener('click', function(){
-            //popupImage.querySelector('img').setAttribute('src', groceryObj.image);
-            popupName.textContent = groceryObj.name;
+           
+           const popupImage = document.createElement('img');
+           popupImage.src = groceryObj.image;
+           popupImage.alt = groceryObj.name;
+           popupName.textContent = groceryObj.name;
             popupDescription.textContent = groceryObj.description;
             popupPrice.textContent = groceryObj.price;
             popUp.style.display = 'block';

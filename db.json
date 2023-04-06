@@ -5,6 +5,7 @@
         "name" :"Red Onions",
         "img" :"https://source.unsplash.com/D9h2-RxM1rE",
         "price" : "ksh 10",
+        "ratings" : "Rating : 4.5",
         "description" : "Red Onions have a slightly milder and sweeter flavor compared to yellow or white onions, and are often used raw in salads, salsas, and sandwiches. They are also commonly used in cooked dishes such as soups, stews, and roasted vegetables. Red onions are a good source of fiber, vitamin C, and antioxidants, and may have anti-inflammatory and anti-cancer properties. They are a versatile and flavorful ingredient that can add color and nutrition to many different types of dishes."
         
     },
@@ -14,6 +15,7 @@
         "name" :"Pumpkin",
         "img" : "https://source.unsplash.com/MWBNBBjZTUA",
         "price" : "ksh 90 per Kg",
+        "ratings" : "Rating : 5.0",
         "description" : "In the kitchen, pumpkins can be roasted, pureed, or baked into pies and other desserts. They are also a popular ingredient in savory dishes, such as soups, stews, and casseroles."
     },
 
@@ -22,6 +24,7 @@
         "name" :"Broccoli",
         "img" : "https://source.unsplash.com/wpJzb1lX5Ac",
         "price" : "ksh 50",
+        "ratings" : "Rating : 4.5",
         "description" : "Broccoli is highly nutritious and is an excellent source of vitamins C, K, and A, as well as folate, fiber, and potassium. It also contains several bioactive compounds that are thought to have health benefits, such as sulforaphane, which has anti-cancer properties."
     },
 
@@ -30,6 +33,7 @@
         "name" :"Potatoes",
         "img" : "https://source.unsplash.com/h3AkzboxK4Q",
         "price" : "ksh 130  per kg",
+        "ratings" : "Rating : 4.2",
         "description" : "Potatoes are a good source of carbohydrates, fiber, and some vitamins and minerals, but can also be high in calories and starch. Potatoes can be cooked in a variety of ways, including boiling, baking, frying, and roasting."
     }, 
      {
@@ -37,6 +41,7 @@
         "name" :"Carrots",
         "img" : "https://source.unsplash.com/GHRT9j21m2M",
         "price" : "ksh 40 per kg",
+        "ratings" : "Rating : 4.5",
         "description" : "Carrots are a good source of dietary fiber, antioxidants, vitamins, and minerals, such as beta-carotene, vitamin K1, potassium, and folate. They are often eaten raw as a snack or in salads, but can also be cooked in a variety of ways, such as roasted, boiled, or steamed"
      } ,
      
@@ -45,6 +50,7 @@
         "name" :"Bell Peppers",
         "img" : "https://source.unsplash.com/gpP-OkJ5BbI",
         "price" : "ksh 15",
+        "ratings" : "Rating : 4.7",
         "description" : "Bell peppers are a rich source of vitamin C, vitamin A, and potassium, and are also low in calories, making them a healthy addition to any diet"
 
      },
@@ -54,6 +60,7 @@
         "name" :"Avocado",
         "img" : "https://source.unsplash.com/Utnc4nbYFKo",
         "price" : "ksh 15",
+        "ratings" : "Rating : 5.0",
         "description" : "Avocados are a rich source of healthy fats, fiber, and several essential vitamins and minerals, including potassium, vitamin K, vitamin C, vitamin E, and B vitamins. They are also a good source of antioxidants, which can help protect the body against damage from harmful free radicals."
 
      }

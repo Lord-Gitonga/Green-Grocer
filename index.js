@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     
     const popUp = document.getElementById('popup');
     const popupContent = document.getElementById('popup-content')
-    //const popupImage = document.getElementById('my-image');
-    //const popupImage = document.createElement('img');
     const popupName = document.getElementById('popup-name')
     const popupDescription = document.getElementById('popup-description')
     const popupPrice = document.getElementById('popup-price')
+    const popUpRatings = document.getElementById('popup-rating')
     
     function showItems () {
         fetch('http://localhost:3000/groceries')
@@ -21,7 +20,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                     name : list.name,
                     image : list.img,
                     price : list.price,
-                    description : list.description
+                    description : list.description,
+                    rating : list.ratings
                 }
                 return groceryObj;
             })
@@ -45,15 +45,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         </div>
         `;
            groceryItems.appendChild(myList);
+
+
            const itemText = myList.querySelector('.card-text a');
            itemText.addEventListener('click', ()=>{
-           
-           const popupImage = document.createElement('img');
-           popupImage.src = groceryObj.image;
-           popupImage.alt = groceryObj.name;
            popupName.textContent = groceryObj.name;
             popupDescription.textContent = groceryObj.description;
             popupPrice.textContent = groceryObj.price;
+            popUpRatings.textContent =groceryObj.rating;
+           
             popUp.style.display = 'block';
 
             const buyButton = document.createElement('button');

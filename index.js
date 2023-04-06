@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded',()=>{
      
     function displayItem (groceryObj){
          let myList = document.createElement('li')
-         myList.className = 'card'
+         //myList.className = 'card'
          myList.innerHTML = `
          <div class="card" style="width: 18rem;">
              <img src="${groceryObj.image}" class="card-img-top" alt="${groceryObj.name}">
              <div class="card-body">
-              <p class="card-text"><a href="#">${groceryObj.name}</a></p>
+              <p class="card-text"><a class="text" href="#">${groceryObj.name}</a></p>
                <p>${groceryObj.price}</p>
              </div>
         </div>
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             popUp.style.display = 'block';
 
             const buyButton = document.createElement('button');
+            buyButton.className = 'buy_btn'
             buyButton.textContent = 'Buy Now';
             popupContent.appendChild(buyButton);
 
@@ -65,6 +66,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             });
 
             const cartButton = document.createElement('button');
+            cartButton.className = 'cart-btn'
             cartButton.textContent = 'Add To Cart';
             popupContent.appendChild(cartButton);
 
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     } 
 
     const closeBtn = document.getElementById('close-btn');
+    //closeBtn.className = "close_btn";
     closeBtn.addEventListener('click', ()=>{
         popupContent.style.display = 'none';
     });

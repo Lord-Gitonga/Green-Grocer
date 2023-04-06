@@ -1,14 +1,29 @@
+#body{
+  background-color: #caf0f8;
+}
+
 #my-display{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 40px;
+    list-style: none;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    text-decoration: none;
   }
+
+  .text{
+    text-decoration: none;
+    color: black;
+  }
+
+  /* .text :hover{
+    color: green;
+  } */
 
   .card-img-top {
     flex-grow: 1;
@@ -31,17 +46,17 @@
     height: 100%;
     background: rgba(0,0,0,0.7);
     z-index: 9999;
+
   }
   
   #popup-content {
     position: relative;
     margin: 7% auto;
     padding: 20px;
-    background: #fff;
+    background: #caf0f8;
     border-radius: 5px;
     width: 50%;
     height: 50%;
-    
   }
   
   #close-btn {
@@ -53,3 +68,46 @@
     font-size: 1.2rem;
     cursor: pointer;
   }
+
+  /* #close-btn :hover{
+    color: green;
+  } */
+
+  .navbar-brand:hover{
+    color: green;
+  }
+
+  #popup-description{
+    text-align: initial;
+  }
+
+  #popup-rating{
+    color: #00bbf9;
+    text-align: center;
+  }
+
+  #popup-price{
+    text-align: center;
+    color: #70e000;
+  }
+
+  .buy_btn{
+    
+    position: absolute;
+    bottom :  10px;
+    left: 10px;
+  }
+
+  /* .buy_btn :hover{
+    background-color: yellow;
+  } */
+
+  .cart-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  /* .cart-btn :hover{
+    background-color: green;
+  } */

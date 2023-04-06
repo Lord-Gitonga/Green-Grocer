@@ -21,9 +21,9 @@
     color: black;
   }
 
-  /* .text :hover{
+  .text:hover{
     color: green;
-  } */
+  }
 
   .card-img-top {
     flex-grow: 1;
@@ -69,9 +69,9 @@
     cursor: pointer;
   }
 
-  /* #close-btn :hover{
+  #close-btn:hover{
     color: green;
-  } */
+  }
 
   .navbar-brand:hover{
     color: green;
@@ -82,13 +82,13 @@
   }
 
   #popup-rating{
-    color: #00bbf9;
+    color: blue;
     text-align: center;
   }
 
   #popup-price{
     text-align: center;
-    color: #70e000;
+    color: #0d0d0c;
   }
 
   .buy_btn{
@@ -96,16 +96,22 @@
     position: absolute;
     bottom :  10px;
     left: 10px;
+    background-color: #70e000;
   }
 
-  /* .buy_btn :hover{
-    background-color: yellow;
-  } */
-
+  .buy_btn:hover{
+    background-color: #fee440;
+  }
+  
   .cart-btn{
     position: absolute;
     bottom: 10px;
     right: 10px;
+    background-color: #fee440;
+  }
+
+  .cart-btn:hover{
+    background-color: #70e000;
   }
 
   /* .cart-btn :hover{

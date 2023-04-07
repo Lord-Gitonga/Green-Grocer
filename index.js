@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded',()=>{
          //myList.className = 'card'
          myList.innerHTML = `
          <div class="card" style="width: 18rem;">
-             <img src="${groceryObj.image}" class="card-img-top" alt="${groceryObj.name}">
+             <img id = "my-image"src="${groceryObj.image}" class="card-img-top" alt="${groceryObj.name}">
              <div class="card-body">
               <p class="card-text"><a class="text" href="#">${groceryObj.name}</a></p>
                <p>${groceryObj.price}</p>
@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
            });
     } 
+    
 
     const closeBtn = document.getElementById('close-btn');
     //closeBtn.className = "close_btn";

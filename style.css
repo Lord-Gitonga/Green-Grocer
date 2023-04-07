@@ -114,6 +114,11 @@
     background-color: #70e000;
   }
 
-  /* .cart-btn :hover{
-    background-color: green;
-  } */
+  
+
+  .carousel-inner img {
+    height: 400px; 
+    width: 170%; 
+    object-fit: cover; 
+  }
+  

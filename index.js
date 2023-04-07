@@ -26,15 +26,31 @@ document.addEventListener('DOMContentLoaded',()=>{
                 return groceryObj;
             })
             myListArr.map(list=>displayItem(list))
-    
+            postItem(groceryObj)
         })
     }
 
     showItems();
-     
+
+
+function postItem(groceryObj){
+    fetch('http://localhost:3000/groceries', {
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json",
+            Accept : "application/json",
+        },
+        body : JSON.stringify(groceryObj),
+    })
+    .then(function(response){
+        return response.json()
+    })
+    .then(groceries => console.log(groceries))
+}
+
+
     function displayItem (groceryObj){
          let myList = document.createElement('li')
-         //myList.className = 'card'
          myList.innerHTML = `
          <div class="card" style="width: 18rem;">
              <img id = "my-image"src="${groceryObj.image}" class="card-img-top" alt="${groceryObj.name}">
